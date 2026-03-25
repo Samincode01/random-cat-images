@@ -1,0 +1,14 @@
+.catContainerCard {
+  display: grid;
+  grid-template-columns: repeat(3,200px);
+  gap: 10px;
+ justify-content: center;
+}
+
+.catContainerCard img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+   align-items: center;
+}
