@@ -3,11 +3,13 @@ import { useState, Suspense } from 'react'
 import './App.css'
 import Cats from './cats/cats.jsx'
 
-function getCats()
-{
-  return fetch('https://api.thecatapi.com/v1/images/search?limit=10')
-.then(res=>res.json())
-
+function getCats() {
+  return fetch('https://api.thecatapi.com/v1/images/search?limit=20', {
+    headers: {
+      'x-api-key': 'live_4RNtOMDljUBYiEHEskcLLTacl2OEzRK8yiqkokXkqUMnj4oDSIWu5JDnSHcOTQfb'
+    }
+  })
+  .then(res => res.json())
 }
 function App() {
 
@@ -19,7 +21,7 @@ function App() {
     <>
         <div>
 
-          <h1>Click to load 10 random Cat Images</h1>
+          <h1>Click to load 20 random Cat Images</h1>
           <button onClick={loadNewCats}>Load New Cats</button>
           <Suspense fallback={<p>Loading.....</p>}>
           <Cats catPromise={catPromise}></Cats>
