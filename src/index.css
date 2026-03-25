@@ -109,3 +109,31 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+button {
+  background: #aa3bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+}
+
+
+button:hover {
+  background: #922fe0;
+  transform: translateY(-2px);
+}
+
+
+button:active {
+  transform: scale(0.98);
+}
+
+
+button:focus {
+  outline: 2px solid rgba(170, 59, 255, 0.4);
+}
